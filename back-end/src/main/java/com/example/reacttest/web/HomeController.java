@@ -1,13 +1,17 @@
 package com.example.reacttest.web;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@CrossOrigin(origins = "http://localhost:3000")
+@RestController
 public class HomeController {
- 
-    @RequestMapping(value = "/")
-    public String index() {
-        return "index";
+
+    @GetMapping(value = "/index")
+    public ResponseEntity<?> index() {
+        return new ResponseEntity("Hello World!!!", HttpStatus.OK);
     }
 }

@@ -10,6 +10,4 @@
 .idea/springboot-react-test.iml
 .idea/vcs.xml
 
-back-end/src/main/resources/static/
-back-end/src/main/resources/templates/
 front-end/node_modules/
